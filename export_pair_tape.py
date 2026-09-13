@@ -31,6 +31,13 @@ summary = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="
            "cash": round(acct["cash"], 2) if acct else None, "windows_settled": len(settled), "both": both, "single": single, "single_won": single_won, "none": none,
            "both_rate_of_filled": round(both / max(1, both + single), 4), "pnl": round(sum(b["pnl"] or 0 for b in settled), 2), "open_windows": len(bets) - len(settled),
            "by_day": sorted(by_day.values(), key=lambda x: x["day"])}
+# only touch summary.json (and commit) when the tape itself changed — avoids a commit every 5 min
+import hashlib
+digest = hashlib.sha1(open(f"{HERE}/data/pair_bets.json", "rb").read() + open(f"{HERE}/data/quotes.csv", "rb").read()).hexdigest()
+hp = f"{HERE}/.last_hash"
+if os.path.exists(hp) and open(hp).read().strip() == digest:
+    print(summary["generated_at"], "no change"); raise SystemExit(0)
+open(hp, "w").write(digest)
 json.dump(summary, open(f"{HERE}/data/summary.json", "w"), indent=1)
 env = {**os.environ, "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"}
 def git(*a): return subprocess.run(["git", *a], cwd=HERE, env=env, capture_output=True, text=True)
