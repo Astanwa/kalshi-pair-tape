@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kalshi BTC 15m pair tape</title>
+<style>
+:root{--bg:#0f1115;--card:#171a21;--text:#e6e6e6;--muted:#8a8f9a;--green:#3ddc84;--red:#ff5c5c;--line:#2a2f3a}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;padding:20px}
+h1{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);margin-bottom:16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:16px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px}.tile .k{color:var(--muted);font-size:12px}.tile .v{font-size:20px;font-weight:600}
+.pos{color:var(--green)}.neg{color:var(--red)}
+table{border-collapse:collapse;width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}
+th,td{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}th{color:var(--muted);font-weight:500;font-size:12px}
+.wrap{overflow-x:auto}svg{width:100%;height:180px;background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:16px}
+.tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:12px}.both{background:#1f4d33;color:var(--green)}.single{background:#4d1f1f;color:var(--red)}.none{background:#2a2f3a;color:var(--muted)}.open{background:#3a3520;color:#e8c547}
+</style></head><body>
+<h1>Kalshi BTC 15m pair tape (paper)</h1>
+<div class="sub" id="sub">loading…</div>
+<div class="tiles" id="tiles"></div>
+<svg id="chart" viewBox="0 0 800 180" preserveAspectRatio="none"></svg>
+<div class="wrap"><table id="days"><thead><tr><th>Day (ET)</th><th>Windows</th><th>Both</th><th>Single</th><th>None</th><th>Both % of filled</th><th>P&amp;L</th></tr></thead><tbody></tbody></table></div>
+<div class="wrap"><table id="rows"><thead><tr><th>Window (ET)</th><th>Mid at post</th><th>YES leg</th><th>NO leg</th><th>Outcome</th><th>Result</th><th>P&amp;L</th></tr></thead><tbody></tbody></table></div>
+<script>
+const $=s=>document.querySelector(s);const money=x=>(x>=0?'+':'')+x.toFixed(2);const cls=x=>x>0?'pos':x<0?'neg':'';
+async function load(){const bust='?t='+Date.now();const s=await (await fetch('data/summary.json'+bust)).json();const rows=await (await fetch('data/pair_bets.json'+bust)).json();
+$('#sub').textContent=`${s.strategy} · level ${s.level} · ${s.contracts_per_leg} contracts/leg · updated ${new Date(s.generated_at).toLocaleString()} · auto-refreshes every 60s`;
+const filled=s.both+s.single;const tiles=[['Settled windows',s.windows_settled],['Both legs filled',`${s.both} (${filled?Math.round(100*s.both/filled):0}% of filled)`],['One leg filled',`${s.single} (${s.single_won} won)`],['Nothing filled',s.none],['P&L',money(s.pnl),cls(s.pnl)],['Cash',`${s.cash} / ${s.start_cash}`]];
+$('#tiles').innerHTML=tiles.map(t=>`<div class="tile"><div class="k">${t[0]}</div><div class="v ${t[2]||''}">${t[1]}</div></div>`).join('');
+const settled=rows.filter(r=>r.status==='settled');let cum=0;const pts=settled.map(r=>cum+=(r.pnl||0));
+if(pts.length>1){const lo=Math.min(0,...pts),hi=Math.max(0,...pts),sp=(hi-lo)||1;const X=i=>i/(pts.length-1)*790+5,Y=v=>170-(v-lo)/sp*160;const zero=Y(0);
+$('#chart').innerHTML=`<line x1="5" y1="${zero}" x2="795" y2="${zero}" stroke="#2a2f3a"/><polyline fill="none" stroke="${cum>=0?'#3ddc84':'#ff5c5c'}" stroke-width="2" points="${pts.map((v,i)=>X(i)+','+Y(v)).join(' ')}"/><text x="8" y="14" fill="#8a8f9a" font-size="11">cumulative P&amp;L, ${money(cum)}</text>`;}
+$('#days tbody').innerHTML=s.by_day.slice().reverse().map(d=>`<tr><td>${d.day}</td><td>${d.n}</td><td>${d.both}</td><td>${d.single}</td><td>${d.none}</td><td>${(d.both+d.single)?Math.round(100*d.both/(d.both+d.single)):0}%</td><td class="${cls(d.pnl)}">${money(d.pnl)}</td></tr>`).join('');
+const leg=(st,at)=>st==='filled'?`filled ${at?at.slice(11,19)+'Z':''}`:st;
+$('#rows tbody').innerHTML=rows.slice(-150).reverse().map(r=>{const o=r.status!=='settled'?'open':r.outcome==='both'?'both':r.outcome==='none'?'none':'single';return `<tr><td>${r.window_et}</td><td>${r.mid_at_post==null?'':r.mid_at_post.toFixed(2)}</td><td>${leg(r.yes_status,r.yes_filled_at)}</td><td>${leg(r.no_status,r.no_filled_at)}</td><td><span class="tag ${o}">${r.status==='settled'?r.outcome:'resting'}</span></td><td>${r.result||''}</td><td class="${cls(r.pnl||0)}">${r.pnl==null?'':money(r.pnl)}</td></tr>`}).join('');}
+load();setInterval(load,60000);
+</script></body></html>
