@@ -1679,16 +1679,16 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.605,
-"yes_status": "resting",
+"yes_status": "unfilled",
 "no_status": "filled",
 "yes_filled_at": null,
 "no_filled_at": "2026-09-14T20:15:59.977166+00:00",
-"outcome": null,
-"result": null,
-"pnl": null,
-"status": "resting",
+"outcome": "no_only",
+"result": "yes",
+"pnl": -10.0,
+"status": "settled",
 "placed_at": "2026-09-14T20:15:19.952730+00:00",
-"settled_at": null
+"settled_at": "2026-09-14T20:31:20.296125+00:00"
 },
 {
 "window_ts": 1789417800,
@@ -1698,15 +1698,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.495,
-"yes_status": "resting",
-"no_status": "resting",
-"yes_filled_at": null,
-"no_filled_at": null,
-"outcome": null,
+"yes_status": "filled",
+"no_status": "filled",
+"yes_filled_at": "2026-09-14T20:32:40.385432+00:00",
+"no_filled_at": "2026-09-14T20:31:20.431206+00:00",
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-14T20:30:00.304460+00:00",
-"settled_at": null
+"settled_at": "2026-09-14T20:32:40.398919+00:00"
 }
 ]
