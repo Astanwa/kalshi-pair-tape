@@ -3123,15 +3123,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.495,
-"yes_status": "resting",
+"yes_status": "unfilled",
 "no_status": "filled",
 "yes_filled_at": null,
 "no_filled_at": "2026-09-15T15:19:04.444944+00:00",
-"outcome": null,
-"result": null,
-"pnl": null,
-"status": "resting",
+"outcome": "no_only",
+"result": "yes",
+"pnl": -10.0,
+"status": "settled",
 "placed_at": "2026-09-15T15:15:04.371961+00:00",
-"settled_at": null
+"settled_at": "2026-09-15T15:31:17.885932+00:00"
 }
 ]
