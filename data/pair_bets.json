@@ -2439,15 +2439,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.495,
-"yes_status": "resting",
+"yes_status": "filled",
 "no_status": "filled",
-"yes_filled_at": null,
+"yes_filled_at": "2026-09-15T06:20:13.010633+00:00",
 "no_filled_at": "2026-09-15T06:17:32.959247+00:00",
-"outcome": null,
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-15T06:15:32.921330+00:00",
-"settled_at": null
+"settled_at": "2026-09-15T06:20:13.014588+00:00"
 }
 ]
