@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-09-16T17:45:00+00:00",
+ "generated_at": "2026-09-16T17:50:00+00:00",
  "strategy": "rest buy-YES and buy-NO at `level` every 15m window (paper), touch-based fill sim from live Kalshi BBO",
  "level": 0.4,
  "contracts_per_leg": 25,
  "start_cash": 500.0,
- "cash": -130.0,
- "windows_settled": 269,
- "both": 129,
+ "cash": -125.0,
+ "windows_settled": 270,
+ "both": 130,
  "single": 140,
  "single_won": 5,
  "none": 0,
- "both_rate_of_filled": 0.4796,
- "pnl": -630.0,
+ "both_rate_of_filled": 0.4815,
+ "pnl": -625.0,
  "open_windows": 0,
  "by_day": [
   {
@@ -40,11 +40,11 @@
   },
   {
    "day": "2026-09-16",
-   "n": 55,
-   "both": 28,
+   "n": 56,
+   "both": 29,
    "single": 27,
    "none": 0,
-   "pnl": -105.0
+   "pnl": -100.0
   }
  ]
 }
