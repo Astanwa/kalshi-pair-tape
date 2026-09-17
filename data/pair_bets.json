@@ -6429,15 +6429,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.505,
-"yes_status": "resting",
+"yes_status": "filled",
 "no_status": "filled",
-"yes_filled_at": null,
+"yes_filled_at": "2026-09-17T13:07:41.725275+00:00",
 "no_filled_at": "2026-09-17T13:01:01.638898+00:00",
-"outcome": null,
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-17T13:00:21.589933+00:00",
-"settled_at": null
+"settled_at": "2026-09-17T13:07:41.730462+00:00"
 }
 ]
