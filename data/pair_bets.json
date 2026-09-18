@@ -7341,15 +7341,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.625,
-"yes_status": "resting",
+"yes_status": "filled",
 "no_status": "filled",
-"yes_filled_at": null,
+"yes_filled_at": "2026-09-18T01:14:35.401802+00:00",
 "no_filled_at": "2026-09-18T01:01:15.208375+00:00",
-"outcome": null,
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-18T01:00:35.073833+00:00",
-"settled_at": null
+"settled_at": "2026-09-18T01:14:35.408053+00:00"
 }
 ]
