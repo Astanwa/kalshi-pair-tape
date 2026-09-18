@@ -8519,15 +8519,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.485,
-"yes_status": "resting",
+"yes_status": "filled",
 "no_status": "filled",
-"yes_filled_at": null,
+"yes_filled_at": "2026-09-18T16:38:12.516326+00:00",
 "no_filled_at": "2026-09-18T16:32:12.409971+00:00",
-"outcome": null,
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-18T16:30:12.396809+00:00",
-"settled_at": null
+"settled_at": "2026-09-18T16:38:12.525154+00:00"
 }
 ]
