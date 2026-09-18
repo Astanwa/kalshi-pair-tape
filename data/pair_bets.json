@@ -7911,15 +7911,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.43499999999999994,
-"yes_status": "resting",
+"yes_status": "filled",
 "no_status": "filled",
-"yes_filled_at": null,
+"yes_filled_at": "2026-09-18T08:39:23.603871+00:00",
 "no_filled_at": "2026-09-18T08:33:23.428152+00:00",
-"outcome": null,
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-18T08:30:03.355682+00:00",
-"settled_at": null
+"settled_at": "2026-09-18T08:39:23.611968+00:00"
 }
 ]
