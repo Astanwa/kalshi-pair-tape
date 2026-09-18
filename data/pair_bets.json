@@ -7788,5 +7788,24 @@
 "status": "settled",
 "placed_at": "2026-09-18T06:45:21.421698+00:00",
 "settled_at": "2026-09-18T06:58:41.676886+00:00"
+},
+{
+"window_ts": 1789714800,
+"window_et": "2026-09-18 03:00",
+"window_utc": "2026-09-18 07:00",
+"ticker": "KXBTC15M-26SEP180315-15",
+"level": 0.4,
+"contracts": 25,
+"mid_at_post": 0.44499999999999995,
+"yes_status": "resting",
+"no_status": "filled",
+"yes_filled_at": null,
+"no_filled_at": "2026-09-18T07:01:21.725123+00:00",
+"outcome": null,
+"result": null,
+"pnl": null,
+"status": "resting",
+"placed_at": "2026-09-18T07:00:01.670022+00:00",
+"settled_at": null
 }
 ]
