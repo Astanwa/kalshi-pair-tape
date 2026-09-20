@@ -9849,15 +9849,15 @@
 "level": 0.4,
 "contracts": 25,
 "mid_at_post": 0.505,
-"yes_status": "resting",
+"yes_status": "filled",
 "no_status": "filled",
-"yes_filled_at": null,
+"yes_filled_at": "2026-09-20T04:43:04.700298+00:00",
 "no_filled_at": "2026-09-20T04:31:44.455267+00:00",
-"outcome": null,
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-20T04:30:24.579304+00:00",
-"settled_at": null
+"settled_at": "2026-09-20T04:43:04.702498+00:00"
 }
 ]
