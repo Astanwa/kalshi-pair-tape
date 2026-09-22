@@ -14562,14 +14562,14 @@
 "contracts": 25,
 "mid_at_post": 0.495,
 "yes_status": "filled",
-"no_status": "resting",
+"no_status": "filled",
 "yes_filled_at": "2026-09-22T18:31:31.789268+00:00",
-"no_filled_at": null,
-"outcome": null,
+"no_filled_at": "2026-09-22T18:36:11.832129+00:00",
+"outcome": "both",
 "result": null,
-"pnl": null,
-"status": "resting",
+"pnl": 5.0,
+"status": "settled",
 "placed_at": "2026-09-22T18:30:11.769266+00:00",
-"settled_at": null
+"settled_at": "2026-09-22T18:36:11.834167+00:00"
 }
 ]
