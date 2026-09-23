@@ -1,98 +1,136 @@
 {
- "generated_at": "2026-09-23T00:35:01+00:00",
- "strategy": "rest buy-YES and buy-NO at `level` every 15m window (paper), touch-based fill sim from live Kalshi BBO",
+ "generated_at": "2026-09-23T00:37:55+00:00",
  "level": 0.4,
  "contracts_per_leg": 25,
- "start_cash": 500.0,
- "cash": -1590.0,
- "windows_settled": 790,
- "both": 375,
- "single": 413,
- "single_won": 7,
- "none": 2,
- "both_rate_of_filled": 0.4759,
- "pnl": -2080.0,
- "open_windows": 1,
- "by_day": [
-  {
-   "day": "2026-09-13",
-   "n": 23,
-   "both": 14,
-   "single": 9,
+ "strategies": {
+  "btc15pairT": {
+   "label": "Trade-tape fills, all day",
+   "note": "fills when trades print at/below 0.40 (>=25 contracts) on the public tape; started 2026-09-22 20:36 ET",
+   "rows_file": "data/btc15pairT.json",
+   "start_cash": 500.0,
+   "cash": 500.0,
+   "windows_settled": 0,
+   "both": 0,
+   "single": 0,
+   "single_won": 0,
    "none": 0,
-   "pnl": 5.0
+   "both_rate_of_filled": 0.0,
+   "pnl": 0,
+   "open_windows": 0,
+   "by_day": []
   },
-  {
-   "day": "2026-09-14",
-   "n": 96,
-   "both": 40,
-   "single": 56,
+  "btc15pairN": {
+   "label": "Trade-tape fills, 00-03 ET only",
+   "note": "same fill model, posts only in windows starting 00:00-02:45 ET; started 2026-09-22",
+   "rows_file": "data/btc15pairN.json",
+   "start_cash": 500.0,
+   "cash": 500.0,
+   "windows_settled": 0,
+   "both": 0,
+   "single": 0,
+   "single_won": 0,
    "none": 0,
-   "pnl": -335.0
+   "both_rate_of_filled": 0.0,
+   "pnl": 0,
+   "open_windows": 0,
+   "by_day": []
   },
-  {
-   "day": "2026-09-15",
-   "n": 95,
-   "both": 47,
-   "single": 48,
-   "none": 0,
-   "pnl": -195.0
-  },
-  {
-   "day": "2026-09-16",
-   "n": 96,
-   "both": 42,
-   "single": 54,
-   "none": 0,
-   "pnl": -305.0
-  },
-  {
-   "day": "2026-09-17",
-   "n": 88,
-   "both": 42,
-   "single": 46,
-   "none": 0,
-   "pnl": -250.0
-  },
-  {
-   "day": "2026-09-18",
-   "n": 96,
-   "both": 49,
-   "single": 47,
-   "none": 0,
-   "pnl": -225.0
-  },
-  {
-   "day": "2026-09-19",
-   "n": 22,
-   "both": 6,
-   "single": 14,
+  "btc15pair": {
+   "label": "Quote-touch fills (original)",
+   "note": "fills only when the best ask touches 0.40 \u2014 undercounts real fills (calibrated 47.6% vs 64.3% paired on the tape); started 2026-09-13",
+   "rows_file": "data/btc15pair.json",
+   "start_cash": 500.0,
+   "cash": -1590.0,
+   "windows_settled": 790,
+   "both": 375,
+   "single": 413,
+   "single_won": 7,
    "none": 2,
-   "pnl": -60.0
-  },
-  {
-   "day": "2026-09-20",
-   "n": 96,
-   "both": 46,
-   "single": 50,
-   "none": 0,
-   "pnl": -270.0
-  },
-  {
-   "day": "2026-09-21",
-   "n": 96,
-   "both": 44,
-   "single": 52,
-   "none": 0,
-   "pnl": -300.0
-  },
-  {
-   "day": "2026-09-22",
-   "n": 82,
-   "both": 45,
-   "single": 37,
-   "none": 0,
-   "pnl": -145.0
+   "both_rate_of_filled": 0.4759,
+   "pnl": -2080.0,
+   "open_windows": 1,
+   "by_day": [
+    {
+     "day": "2026-09-13",
+     "n": 23,
+     "both": 14,
+     "single": 9,
+     "none": 0,
+     "pnl": 5.0
+    },
+    {
+     "day": "2026-09-14",
+     "n": 96,
+     "both": 40,
+     "single": 56,
+     "none": 0,
+     "pnl": -335.0
+    },
+    {
+     "day": "2026-09-15",
+     "n": 95,
+     "both": 47,
+     "single": 48,
+     "none": 0,
+     "pnl": -195.0
+    },
+    {
+     "day": "2026-09-16",
+     "n": 96,
+     "both": 42,
+     "single": 54,
+     "none": 0,
+     "pnl": -305.0
+    },
+    {
+     "day": "2026-09-17",
+     "n": 88,
+     "both": 42,
+     "single": 46,
+     "none": 0,
+     "pnl": -250.0
+    },
+    {
+     "day": "2026-09-18",
+     "n": 96,
+     "both": 49,
+     "single": 47,
+     "none": 0,
+     "pnl": -225.0
+    },
+    {
+     "day": "2026-09-19",
+     "n": 22,
+     "both": 6,
+     "single": 14,
+     "none": 2,
+     "pnl": -60.0
+    },
+    {
+     "day": "2026-09-20",
+     "n": 96,
+     "both": 46,
+     "single": 50,
+     "none": 0,
+     "pnl": -270.0
+    },
+    {
+     "day": "2026-09-21",
+     "n": 96,
+     "both": 44,
+     "single": 52,
+     "none": 0,
+     "pnl": -300.0
+    },
+    {
+     "day": "2026-09-22",
+     "n": 82,
+     "both": 45,
+     "single": 37,
+     "none": 0,
+     "pnl": -145.0
+    }
+   ]
   }
- ]
+ }
 }
