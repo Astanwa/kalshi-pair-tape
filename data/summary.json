@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-23T01:00:00+00:00",
+ "generated_at": "2026-09-23T01:05:00+00:00",
  "level": 0.4,
  "contracts_per_leg": 25,
  "strategies": {
@@ -8,7 +8,7 @@
    "note": "fills when trades print at/below 0.40 (>=25 contracts) on the public tape; started 2026-09-22 20:36 ET",
    "rows_file": "data/btc15pairT.json",
    "start_cash": 500.0,
-   "cash": 505.0,
+   "cash": 495.0,
    "windows_settled": 1,
    "both": 1,
    "single": 0,
@@ -16,7 +16,7 @@
    "none": 0,
    "both_rate_of_filled": 1.0,
    "pnl": 5.0,
-   "open_windows": 0,
+   "open_windows": 1,
    "by_day": [
     {
      "day": "2026-09-22",
@@ -49,14 +49,14 @@
    "note": "fills only when the best ask touches 0.40 \u2014 undercounts real fills (calibrated 47.6% vs 64.3% paired on the tape); started 2026-09-13",
    "rows_file": "data/btc15pair.json",
    "start_cash": 500.0,
-   "cash": -1585.0,
-   "windows_settled": 791,
+   "cash": -1595.0,
+   "windows_settled": 792,
    "both": 376,
-   "single": 413,
+   "single": 414,
    "single_won": 7,
    "none": 2,
-   "both_rate_of_filled": 0.4766,
-   "pnl": -2075.0,
+   "both_rate_of_filled": 0.4759,
+   "pnl": -2085.0,
    "open_windows": 1,
    "by_day": [
     {
@@ -133,11 +133,11 @@
     },
     {
      "day": "2026-09-22",
-     "n": 83,
+     "n": 84,
      "both": 46,
-     "single": 37,
+     "single": 38,
      "none": 0,
-     "pnl": -140.0
+     "pnl": -150.0
     }
    ]
   }

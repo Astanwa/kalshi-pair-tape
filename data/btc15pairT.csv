@@ -1,2 +1,3 @@
 window_ts,window_et,window_utc,ticker,level,contracts,mid_at_post,yes_status,no_status,yes_filled_at,no_filled_at,yes_vol,no_vol,outcome,result,pnl,status,placed_at,settled_at
 1790124300,2026-09-22 20:45,2026-09-23 00:45,KXBTC15M-26SEP222100-00,0.4,25,0.625,filled,filled,2026-09-23T00:58:36.867327+00:00,2026-09-23T00:45:56.841140+00:00,34,1393761,both,,5.0,settled,2026-09-23T00:45:16.330927+00:00,2026-09-23T00:58:36.873145+00:00
+1790125200,2026-09-22 21:00,2026-09-23 01:00,KXBTC15M-26SEP222115-15,0.4,25,0.475,resting,filled,,2026-09-23T01:01:16.842673+00:00,0,810841,,,,resting,2026-09-23T01:00:36.485671+00:00,
