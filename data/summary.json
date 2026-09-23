@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-23T02:05:00+00:00",
+ "generated_at": "2026-09-23T02:10:00+00:00",
  "level": 0.4,
  "contracts_per_leg": 25,
  "strategies": {
@@ -49,7 +49,7 @@
    "note": "fills only when the best ask touches 0.40 \u2014 undercounts real fills (calibrated 47.6% vs 64.3% paired on the tape); started 2026-09-13",
    "rows_file": "data/btc15pair.json",
    "start_cash": 500.0,
-   "cash": -1600.0,
+   "cash": -1610.0,
    "windows_settled": 796,
    "both": 376,
    "single": 418,
