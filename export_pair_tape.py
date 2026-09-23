@@ -43,6 +43,8 @@ wins = sorted({r["window_ts"] for s in summary["strategies"] for r in json.load(
 q = con.execute(f"SELECT window_ts, secs_in, yes_bid, yes_ask FROM btc15_bbo_log WHERE window_ts IN ({','.join('?'*len(wins))}) ORDER BY window_ts, secs_in", wins).fetchall()
 with open(f"{HERE}/data/quotes.csv", "w", newline="") as f:
     w = csv.writer(f); w.writerow(["window_ts", "secs_in", "yes_bid", "yes_ask"]); w.writerows([tuple(r) for r in q])
+rp = f"{HERE}/regime_report.md"
+if os.path.exists(rp): digest.update(open(rp, "rb").read())
 hp = f"{HERE}/.last_hash"; d = digest.hexdigest()
 if os.path.exists(hp) and open(hp).read().strip() == d:
     print(summary["generated_at"], "no change"); raise SystemExit(0)
